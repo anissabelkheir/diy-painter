@@ -1,0 +1,65 @@
+html {
+  font-size: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  max-width: 100vw;
+  max-height: 100vh;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  -ms-grid-rows: (1vw)[auto-fit];
+      grid-template-rows: repeat(auto-fit, 1vw);
+  -ms-grid-columns: (1vw)[100];
+      grid-template-columns: repeat(100, 1vw);
+}
+
+.grid-item {
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.color-picker {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: .5vw;
+  -webkit-transition: opacity .5s .2s, -webkit-transform .1s;
+  transition: opacity .5s .2s, -webkit-transform .1s;
+  transition: opacity .5s .2s, transform .1s;
+  transition: opacity .5s .2s, transform .1s, -webkit-transform .1s;
+  -webkit-transform: translateX(-2000%);
+          transform: translateX(-2000%);
+  opacity: 0;
+  border: 1px solid #777777;
+  background-color: white;
+}
+
+.color-picker div {
+  width: 2vw;
+  height: 2vw;
+  margin: .2rem;
+}
+
+.color-picker.isVisible {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+/*# sourceMappingURL=style.css.map */
